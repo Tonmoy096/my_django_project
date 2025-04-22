@@ -4,7 +4,7 @@ from .models import Product
 admin.site.register(Product)
 # Register your models here.
 '''
-from django.contrib import admin
+'''from django.contrib import admin
 from .models import Product, Category, Tag, Profile
 # Register your models here.
 class ProductAdmin(admin.ModelAdmin):
@@ -41,4 +41,11 @@ class CustomUserAdmin(UserAdmin):
     inlines = [ProfileInline]
 
 admin.site.unregister(User)
-admin.site.register(User, CustomUserAdmin)
+admin.site.register(User, CustomUserAdmin)'''
+from django.contrib import admin
+from .models import Product, Tag, Category
+
+# Register your models here
+admin.site.register(Product)
+admin.site.register(Tag)
+admin.site.register(Category)
